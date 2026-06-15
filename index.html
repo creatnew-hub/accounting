@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小店记账</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>📒 小店记账本</h1>
+
+    <!-- 输入区域 -->
+    <div class="input-area">
+        <input type="date" id="date">
+        <input type="text" id="item" placeholder="商品名称">
+        <input type="number" id="amount" placeholder="金额（收入正数，支出负数）">
+        <button onclick="addRecord()">记一笔</button>
+    </div>
+
+    <!-- 统计区域 -->
+    <div class="stats">
+        <div>总收入：<span id="income">0</span></div>
+        <div>总支出：<span id="expense">0</span></div>
+        <div>结余：<span id="balance">0</span></div>
+    </div>
+
+    <!-- 列表区域 -->
+    <table>
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>商品</th>
+                <th>金额</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="recordList">
+            <!-- 记录会显示在这里 -->
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
